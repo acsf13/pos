@@ -1,0 +1,13 @@
+A partir do dataset escolhido para trabalhar com os métodos supervisionados e a biblioteca scikitlearn do Python, realize as seguintes tarefas:
+
+1.Identifique o atributo alvo.
+
+2.Execute o algoritmo K-NN aplicando cross-validation (validação cruzada) para 10 KFolds.
+
+3.Execute o algoritmo K-NN aplicando Holdout, dividindo o dataset em 30% para teste.
+
+4.Altere o número de k para obter uma melhor acurácia na validação.
+
+5.Analise e compare os resultados obtidos, utilizando a matriz de confusão e computando a acurácia.
+
+Submeter o código fonte até o dia 07/12/2024.
