@@ -11,3 +11,9 @@ A partir do dataset escolhido para trabalhar com os métodos supervisionados e a
 5.Analise e compare os resultados obtidos, utilizando a matriz de confusão e computando a acurácia.
 
 Submeter o código fonte até o dia 07/12/2024.
+
+
+#Dataset Kaggle
+https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset
+
+jupyter nbconvert --to script KNN-CrossValidation-GYM.ipynb
