@@ -16,4 +16,8 @@ Submeter o código fonte até o dia 07/12/2024.
 #Dataset Kaggle
 https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset
 
+
+Comandos uteis:
+-------------------------------------------------------------
 jupyter nbconvert --to script KNN-CrossValidation-GYM.ipynb
+python -m jupyter nbconvert --to script trab_1.2-KNN-Holdout-GYM.ipynb
