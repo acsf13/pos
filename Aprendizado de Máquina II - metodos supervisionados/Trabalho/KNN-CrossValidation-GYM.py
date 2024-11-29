@@ -202,8 +202,6 @@ accuracy_score(y,predictions_train)*100
 confusion_matrix(y,predictions_train)
 
 
-# In[ ]:
-
 
 #Gera a matriz de confusão do treino na visualização de HeatMMap
 import seaborn as sns
