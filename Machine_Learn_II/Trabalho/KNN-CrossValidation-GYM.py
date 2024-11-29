@@ -98,6 +98,11 @@ accuracy_score(y,predictions_train)*100
 #Gera a matriz de confusão do treino
 confusion_matrix(y,predictions_train)
 
+<<<<<<< HEAD:Aprendizado de Máquina II - metodos supervisionados/Trabalho/KNN-CrossValidation-GYM.py
+
+
+=======
+>>>>>>> d2c8960982669e49859e431af51d144065c900e5:Machine_Learn_II/Trabalho/KNN-CrossValidation-GYM.py
 #Gera a matriz de confusão do treino na visualização de HeatMMap
 import seaborn as sns
 cf = confusion_matrix(y,predictions_train)
