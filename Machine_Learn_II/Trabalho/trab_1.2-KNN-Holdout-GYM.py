@@ -12,7 +12,6 @@ df_gym = pd.read_csv('C:/Users/Antonio/Desktop/projeto-pos/pos/Machine_Learn_II/
 
 # Checar valores ausentes
 missing_values = df_gym.isnull().sum()
-print(f"Valores ausentes:\n{missing_values}\n")
 
 # Remover linhas com valores ausentes na variável alvo
 df_gym = df_gym.dropna(subset=['Experience_Level'])

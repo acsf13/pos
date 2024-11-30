@@ -86,10 +86,8 @@ axes[1].set_ylabel('Valores Reais')
 plt.tight_layout()
 plt.show()
 
-
-
 #########################################################################################
-# 4.Altere o número de k para obter uma melhor acurácia na validação.
+# Altere o número de k para obter uma melhor acurácia na validação.
 #########################################################################################
 # Testar diferentes valores de k
 k_values = range(1, 31)  # Valores de k entre 1 e 30
