@@ -10,7 +10,6 @@ df_gym = pd.read_csv('C:/Users/Antonio/Desktop/projeto-pos/pos/Machine_Learn_II/
 
 # Checar valores ausentes
 missing_values = df_gym.isnull().sum()
-print(f"Valores ausentes:\n{missing_values}\n")
 
 # Remover linhas com valores ausentes na variável alvo
 df_gym = df_gym.dropna(subset=['Experience_Level'])
@@ -36,7 +35,7 @@ k_folds = 10
 kf = KFold(n_splits=k_folds, shuffle=True, random_state=42)
 
 # Testar diferentes valores de k no KNN
-k_values = range(1, 31)  # Valores de k entre 1 e 30
+k_values = range(1, 30)  # Valores de k entre 1 e 10
 mean_scores = []
 std_scores = []
 
@@ -45,7 +44,15 @@ for k in k_values:
     
     # Realizar validação cruzada
     scores = cross_val_score(knn, X_scaled, y, cv=kf, scoring='accuracy')
-    
+    # Calcular e exibir os resultados
+    mean_accuracy = np.mean(scores)*100
+    formatted_scores = [f"{score:.2f}" for score in scores]  # Formatar cada valor do array
+
+    print(f"Vizinho k: {formatted_scores}")
+    print(f"Acurácias nos 10 KFolds: {scores:.2f}")
+    print(f"Acurácia média: {mean_accuracy:.2f}")
+    print('###################################')
+
     # Registrar as médias e desvios padrão das acurácias
     mean_scores.append(scores.mean())
     std_scores.append(scores.std())
