@@ -45,12 +45,12 @@ for k in k_values:
     # Realizar validação cruzada
     scores = cross_val_score(knn, X_scaled, y, cv=kf, scoring='accuracy')
     # Calcular e exibir os resultados
-    mean_accuracy = np.mean(scores)*100
+    mean_accuracy = np.mean(scores) * 100
     formatted_scores = [f"{score:.2f}" for score in scores]  # Formatar cada valor do array
 
-    print(f"Vizinho k: {formatted_scores}")
-    print(f"Acurácias nos 10 KFolds: {scores:.2f}")
-    print(f"Acurácia média: {mean_accuracy:.2f}")
+    print(f"Vizinho k: {k}")
+    print(f"Acurácias nos 10 KFolds: {', '.join(formatted_scores)}")  # Mostrar os valores formatados
+    print(f"Acurácia média: {mean_accuracy:.2f}%")
     print('###################################')
 
     # Registrar as médias e desvios padrão das acurácias
