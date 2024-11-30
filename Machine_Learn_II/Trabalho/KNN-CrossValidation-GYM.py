@@ -6,12 +6,11 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import LabelEncoder
 
 #Load dataset
-df_gym = pd.read_csv('gym_members_exercise_tracking.csv')
+df_gym = pd.read_csv('C:/Users/Antonio/Desktop/projeto-pos/pos/Machine_Learn_II/Trabalho/gym.csv')
 df_gym.head()
-
-from sklearn.preprocessing import LabelEncoder
 
 # Initialize the LabelEncoder
 le = LabelEncoder()
@@ -97,12 +96,6 @@ accuracy_score(y,predictions_train)*100
 
 #Gera a matriz de confusão do treino
 confusion_matrix(y,predictions_train)
-
-<<<<<<< HEAD:Aprendizado de Máquina II - metodos supervisionados/Trabalho/KNN-CrossValidation-GYM.py
-
-
-=======
->>>>>>> d2c8960982669e49859e431af51d144065c900e5:Machine_Learn_II/Trabalho/KNN-CrossValidation-GYM.py
 #Gera a matriz de confusão do treino na visualização de HeatMMap
 import seaborn as sns
 cf = confusion_matrix(y,predictions_train)
