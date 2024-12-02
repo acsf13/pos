@@ -7,8 +7,8 @@ import seaborn as sns
 import pandas as pd
 
 #Load dataset
-df_gym = pd.read_csv('C:/Users/Antonio/Desktop/projeto-pos/pos/Machine_Learn_II/Trabalho/gym.csv')
-df_gym.head()
+df_gym = pd.read_csv('C:/Users/acsfarias/Desktop/Pós-Ciência de Dados/pos/Machine_Learn_II/Trabalho/gym.csv')
+df_gym.head()  
 
 # Check for missing values
 missing_values = df_gym.isnull().sum()
