@@ -7,17 +7,12 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-<<<<<<< HEAD
-#Load dataset
-df_gym = pd.read_csv('C:/Users/acsfarias/Desktop/Pós-Ciência de Dados/pos/Machine_Learn_II/Trabalho/gym.csv')
-df_gym.head()  
-=======
 # Carga e processamento dos dados
 df_gym = pd.read_csv('C:/Users/Antonio/Desktop/projeto-pos/pos/Machine_Learn_II/Trabalho/gym.csv')
->>>>>>> fc919c1e947e7f0ad04953e6812ffb1375e6118c
 
 # Checar valores ausentes
 missing_values = df_gym.isnull().sum()
+print(f"Valores ausentes:\n{missing_values}\n")
 
 # Remover linhas com valores ausentes na variável alvo
 df_gym = df_gym.dropna(subset=['Experience_Level'])
@@ -90,3 +85,39 @@ axes[1].set_ylabel('Valores Reais')
 
 plt.tight_layout()
 plt.show()
+
+#########################################################################################
+# Altere o número de k para obter uma melhor acurácia na validação.
+#########################################################################################
+# Testar diferentes valores de k
+k_values = range(1, 31)  # Valores de k entre 1 e 30
+train_accuracies = []
+test_accuracies = []
+
+for k in k_values:
+    knn = KNeighborsClassifier(n_neighbors=k)
+    knn.fit(X_train, y_train)
+    y_train_pred = knn.predict(X_train)
+    y_test_pred = knn.predict(X_test)
+    
+    # Calcular acurácias
+    train_accuracies.append(accuracy_score(y_train, y_train_pred))
+    test_accuracies.append(accuracy_score(y_test, y_test_pred))
+
+# Encontrar o valor de k com a melhor acurácia no teste
+optimal_k = k_values[test_accuracies.index(max(test_accuracies))]
+print(f"Melhor valor de k: {optimal_k}")
+print(f"Acurácia no conjunto de teste com k={optimal_k}: {max(test_accuracies):.4f}")
+
+# Plotar acurácia para diferentes valores de k
+plt.figure(figsize=(10, 6))
+plt.plot(k_values, train_accuracies, label='Acurácia no Treinamento', marker='o')
+plt.plot(k_values, test_accuracies, label='Acurácia no Teste', marker='o')
+plt.axvline(optimal_k, color='red', linestyle='--', label=f'Melhor k = {optimal_k}')
+plt.title('Acurácia vs. Número de Vizinhos (k)')
+plt.xlabel('Número de Vizinhos (k)')
+plt.ylabel('Acurácia')
+plt.legend()
+plt.grid(True)
+plt.show()
+
