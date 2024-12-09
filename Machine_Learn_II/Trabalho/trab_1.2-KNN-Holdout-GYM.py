@@ -7,8 +7,14 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+<<<<<<< HEAD
+#Load dataset
+df_gym = pd.read_csv('C:/Users/acsfarias/Desktop/Pós-Ciência de Dados/pos/Machine_Learn_II/Trabalho/gym.csv')
+df_gym.head()  
+=======
 # Carga e processamento dos dados
 df_gym = pd.read_csv('C:/Users/Antonio/Desktop/projeto-pos/pos/Machine_Learn_II/Trabalho/gym.csv')
+>>>>>>> fc919c1e947e7f0ad04953e6812ffb1375e6118c
 
 # Checar valores ausentes
 missing_values = df_gym.isnull().sum()
