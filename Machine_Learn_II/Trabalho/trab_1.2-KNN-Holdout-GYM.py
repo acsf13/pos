@@ -7,14 +7,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-<<<<<<< HEAD
-#Load dataset
-df_gym = pd.read_csv('C:/Users/acsfarias/Desktop/Pós-Ciência de Dados/pos/Machine_Learn_II/Trabalho/gym.csv')
-df_gym.head()  
-=======
 # Carga e processamento dos dados
 df_gym = pd.read_csv('C:/Users/Antonio/Desktop/projeto-pos/pos/Machine_Learn_II/Trabalho/gym.csv')
->>>>>>> fc919c1e947e7f0ad04953e6812ffb1375e6118c
 
 # Checar valores ausentes
 missing_values = df_gym.isnull().sum()
@@ -81,12 +75,16 @@ sns.heatmap(train_conf_matrix, annot=True, fmt='d', cmap='Blues', ax=axes[0])
 axes[0].set_title('Matriz de Confusão - Treinamento')
 axes[0].set_xlabel('Previsões')
 axes[0].set_ylabel('Valores Reais')
+axes[1].set_xticklabels(['Iniciante', 'Intermediário', 'Avançado'])
+axes[1].set_yticklabels(['Iniciante', 'Intermediário', 'Avançado'])
 
 # Matriz de confusão do teste
 sns.heatmap(test_conf_matrix, annot=True, fmt='d', cmap='Blues', ax=axes[1])
 axes[1].set_title('Matriz de Confusão - Teste')
 axes[1].set_xlabel('Previsões')
 axes[1].set_ylabel('Valores Reais')
+axes[1].set_xticklabels(['Iniciante', 'Intermediário', 'Avançado'])
+axes[1].set_yticklabels(['Iniciante', 'Intermediário', 'Avançado'])
 
 plt.tight_layout()
 plt.show()
