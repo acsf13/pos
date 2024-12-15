@@ -76,13 +76,16 @@ sns.heatmap(train_conf_matrix, annot=True, fmt='d', cmap='Blues', ax=axes[0])
 axes[0].set_title('Matriz de Confusão - Treinamento')
 axes[0].set_xlabel('Previsões')
 axes[0].set_ylabel('Valores Reais')
+axes[0].set_xticklabels(['Iniciante', 'Intermediário', 'Avançado'])
+axes[0].set_yticklabels(['Iniciante', 'Intermediário', 'Avançado'])
 
 # Matriz de confusão do teste
 sns.heatmap(test_conf_matrix, annot=True, fmt='d', cmap='Blues', ax=axes[1])
 axes[1].set_title('Matriz de Confusão - Teste')
 axes[1].set_xlabel('Previsões')
 axes[1].set_ylabel('Valores Reais')
-
+axes[1].set_xticklabels(['Iniciante', 'Intermediário', 'Avançado'])
+axes[1].set_yticklabels(['Iniciante', 'Intermediário', 'Avançado'])
 plt.tight_layout()
 plt.show()
 
