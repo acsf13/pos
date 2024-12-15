@@ -67,8 +67,14 @@ plt.show()
 conf_matrix = confusion_matrix(y_test, y_pred)
 
 # Exibir a matriz de confusão
+# Exibir a matriz de confusão com rótulos personalizados
 disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=np.unique(y))
-disp.plot(cmap='Blues')
+fig, ax = plt.subplots(figsize=(8, 6))  # Ajusta o tamanho da figura
+disp.plot(cmap='Blues', ax=ax)
+ax.set_xticks(range(len(disp.display_labels)))
+ax.set_yticks(range(len(disp.display_labels)))
+ax.set_xticklabels(['Iniciante', 'Intermediário', 'Avançado'])
+ax.set_yticklabels(['Iniciante', 'Intermediário', 'Avançado'])
 plt.title('Matriz de Confusão')
 plt.show()
 

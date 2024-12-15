@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import matplotlib.pyplot as plt
 
 # Carregar o dataset
-df_gym = pd.read_csv('/mnt/data/gym.csv')  # Substituir pelo caminho correto caso necessário
+df_gym = pd.read_csv('C:/Users/Antonio/Desktop/projeto-pos/pos/Machine_Learn_II/Trabalho/gym.csv')  # Substituir pelo caminho correto caso necessário
 
 # Remover linhas com valores ausentes na variável alvo
 df_gym = df_gym.dropna(subset=['Experience_Level'])
