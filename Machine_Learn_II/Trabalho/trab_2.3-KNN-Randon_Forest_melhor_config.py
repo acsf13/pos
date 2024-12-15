@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import matplotlib.pyplot as plt
 
 # Carregar o dataset
-df_gym = pd.read_csv('gym.csv')
+df_gym = pd.read_csv('C:/Users/Antonio/Desktop/projeto-pos/pos/Machine_Learn_II/Trabalho/gym.csv')
 
 # Remover linhas com valores ausentes na variável alvo
 df_gym = df_gym.dropna(subset=['Experience_Level'])
@@ -48,7 +48,7 @@ grid_search.fit(X_train, y_train)
 # Melhor configuração e modelo treinado
 best_model = grid_search.best_estimator_
 best_params = grid_search.best_params_
-print("\nMelhor Configuração Encontrada:")
+print("/nMelhor Configuração Encontrada:")
 print(best_params)
 
 # Avaliar o modelo com os dados de teste
@@ -60,7 +60,7 @@ precision = precision_score(y_test, y_pred, average='weighted', zero_division=0)
 recall = recall_score(y_test, y_pred, average='weighted', zero_division=0)
 f1 = f1_score(y_test, y_pred, average='weighted')
 
-print("\nMétricas de Avaliação no Conjunto de Teste:")
+print("/nMétricas de Avaliação no Conjunto de Teste:")
 print(f"Acurácia: {accuracy:.2%}")
 print(f"Precisão: {precision:.2%}")
 print(f"Recall: {recall:.2%}")
