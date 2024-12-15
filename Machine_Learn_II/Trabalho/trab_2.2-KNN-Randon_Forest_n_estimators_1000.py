@@ -29,7 +29,7 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Configuração do modelo Random Forest
-random_forest = RandomForestClassifier(random_state=42, n_jobs=-1)
+random_forest = RandomForestClassifier(random_state=42, n_jobs=-1, n_estimators=1000)
 
 # Configuração do Cross-Validation com 10 k-folds
 kfold = KFold(n_splits=10, shuffle=True, random_state=42)
@@ -63,7 +63,6 @@ print(f"Acurácia: {accuracy:.2%}")
 print(f"Precisão: {precision:.2%}")
 print(f"Recall: {recall:.2%}")
 print(f"F1-Score: {f1:.2%}")
-
 
 # Gerar gráfico das métricas
 metrics = ['Acurácia', 'Precisão', 'Recall', 'F1-Score']
