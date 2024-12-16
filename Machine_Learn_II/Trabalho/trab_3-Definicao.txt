@@ -1,0 +1,16 @@
+Atividade Prática 4 - NaiveBayes
+
+1. Execute o algoritmo NaiveBayes do sklearn com as seguintes configurações:
+
+1.1 Aplique o método Cross-Validation para 10 k-folds (cv =10).
+
+ 1.2 Altere o parâmetro 
+
+1.3 Encontre a melhor configuração utilizando as métricas Acuracy, Precision e Recall.
+
+2. Execute novamente o algoritmo Naive Bayes com o método Holdout utilizando entre 25 a 30% dos dados para teste, utilizando como parâmetro do algoritmo o método que apresentou o melhor desempenho no exercício 1.
+
+ 2.1 Analise e compare os resultados obtidos, utilizando a matriz de confusão para interpretar  os valores de Acuracy, Precision, Recall e F1-score do dataset de teste.
+
+2.2 O objetivo é encontrar a melhor parametrização do algoritmo Naive Bayes para o dataset utilizado, baseando-se nas medidas de avaliação de métodos supervisionados.
+
