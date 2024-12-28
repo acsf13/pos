@@ -80,7 +80,6 @@ plt.show()
 
 # O conjunto de dados é dividido em 10 folds aleatórios.
 # Cada fold é usado como conjunto de teste enquanto os outros 9 são usados para treino.
-# Cross-Validation com cross_val_score:
 
 # Avalia o modelo K-NN para cada valor de 𝑘
 # k.
@@ -98,8 +97,3 @@ plt.show()
 # Visualização:
 
 # Um gráfico mostra a acurácia média e os intervalos de erro (desvio padrão) para cada valor de 
-# 𝑘
-# k.
-# Benefícios:
-# O modelo é avaliado de forma robusta, minimizando o impacto de divisões específicas dos dados.
-# O desvio padrão ajuda a entender a variabilidade do desempenho para diferentes divisões.
